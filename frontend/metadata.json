@@ -1,0 +1,6 @@
+{
+  "name": "MORPH Event App",
+  "description": "Event management and live scoring platform for the MORPH competition.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #050409;
+    --bg-graphite: #0C0A14;
+    --bg-surface-elevated: #151024;
+    --chrome-light: #F8F9FA;
+    --chrome-mid: #CBD5E1;
+    --chrome-dark: #334155;
+    --metallic-purple: #9D4EDD;
+    --vibrant-purple: #C77DFF;
+    --deep-violet: #5A189A;
+    --royal-purple: #7B2CBF;
+    --amethyst-glow: #E0AAFF;
+    --orange-reflection: #FF7045;
+    --border-purple: rgba(199, 125, 255, 0.22);
+    --border-highlight: rgba(248, 249, 250, 0.35);
+  }
+
+  body {
+    background-color: #050409;
+    color: #F8F9FA;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    overflow-x: hidden;
+    selection-background-color: #5A189A;
+    selection-color: #FFFFFF;
+  }
+}
+
+/* Liquid Metallic Purple & Molten Mercury Canvas Background */
+.bg-chrome-canvas {
+  background-color: #050409;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(199, 125, 255, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 85% 25%, rgba(157, 78, 221, 0.14) 0%, transparent 50%),
+    radial-gradient(circle at 15% 75%, rgba(123, 44, 191, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 75% 88%, rgba(255, 112, 69, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(90, 24, 154, 0.08) 0%, transparent 65%),
+    linear-gradient(180deg, #050409 0%, #0C0A14 50%, #050409 100%);
+  background-attachment: fixed;
+}
+
+/* Liquid Metallic Purple Floating Sculptural Panel */
+.chrome-panel {
+  background: linear-gradient(145deg, rgba(21, 16, 36, 0.92) 0%, rgba(12, 10, 20, 0.97) 100%);
+  border: 1px solid rgba(199, 125, 255, 0.20);
+  box-shadow: 
+    0 24px 50px -12px rgba(0, 0, 0, 0.96),
+    0 0 35px -8px rgba(157, 78, 221, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+}
+
+.chrome-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chrome-panel-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(199, 125, 255, 0.40);
+  box-shadow: 
+    0 32px 64px -15px rgba(0, 0, 0, 0.98),
+    0 0 45px rgba(199, 125, 255, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* High-Gloss Mirror Liquid Chrome Primary Button (Platinum Silver + Purple Aura) */
+.btn-chrome-primary {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 28%, #CBD5E1 68%, #E2E8F0 100%);
+  color: #050409;
+  font-weight: 900;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.7),
+    0 0 24px rgba(255, 255, 255, 0.30),
+    0 0 20px rgba(199, 125, 255, 0.35),
+    inset 0 1.5px 0 #FFFFFF,
+    inset 0 -2px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-chrome-primary:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF5FF 32%, #E9D5FF 68%, #F3E8FF 100%);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.85),
+    0 0 36px rgba(255, 255, 255, 0.5),
+    0 0 28px rgba(199, 125, 255, 0.5),
+    inset 0 2px 0 #FFFFFF;
+}
+
+.btn-chrome-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Molten Metallic Purple Button */
+.btn-chrome-purple {
+  background: linear-gradient(180deg, #C77DFF 0%, #9D4EDD 40%, #7B2CBF 80%, #5A189A 100%);
+  color: #FFFFFF;
+  font-weight: 900;
+  border: 1px solid rgba(224, 170, 255, 0.8);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(199, 125, 255, 0.45),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-chrome-purple:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #E0AAFF 0%, #C77DFF 40%, #9D4EDD 80%, #7B2CBF 100%);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.9),
+    0 0 35px rgba(199, 125, 255, 0.65),
+    inset 0 2px 0 #FFFFFF;
+}
+
+/* Dark Brushed Graphite & Violet Mirror Secondary Button */
+.btn-chrome-secondary {
+  background: linear-gradient(180deg, #201733 0%, #100C1B 100%);
+  color: #F8F9FA;
+  border: 1px solid rgba(199, 125, 255, 0.22);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-chrome-secondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(199, 125, 255, 0.45);
+  background: linear-gradient(180deg, #2D2048 0%, #181229 100%);
+  color: #FFFFFF;
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.7),
+    0 0 24px rgba(199, 125, 255, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.btn-chrome-secondary:active {
+  transform: translateY(1px);
+}
+
+/* Liquid Chrome Crimson Accent Button */
+.btn-chrome-danger {
+  background: linear-gradient(180deg, #881337 0%, #4C0519 100%);
+  color: #FECDD3;
+  border: 1px solid rgba(244, 63, 94, 0.45);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: all 0.2s ease;
+}
+
+.btn-chrome-danger:hover {
+  background: linear-gradient(180deg, #9F1239 0%, #5C0720 100%);
+  border-color: rgba(244, 63, 94, 0.75);
+  color: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(225, 29, 72, 0.4);
+}
+
+/* Chrome Recessed Input Field */
+.chrome-input {
+  background: linear-gradient(180deg, #07050E 0%, #110D1D 100%);
+  border: 1px solid rgba(199, 125, 255, 0.20);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+  color: #F8F9FA;
+  transition: all 0.2s ease;
+}
+
+.chrome-input:focus {
+  outline: none;
+  border-color: rgba(199, 125, 255, 0.8);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(199, 125, 255, 0.35),
+    0 0 0 1px rgba(199, 125, 255, 0.5);
+}
+
+/* Prismatic Liquid Chrome Card (For Collectibles, Brands & Vault) */
+.chrome-card-collectible {
+  background: linear-gradient(145deg, rgba(25, 18, 42, 0.95) 0%, rgba(12, 10, 22, 0.98) 100%);
+  border: 1px solid rgba(199, 125, 255, 0.22);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.92),
+    0 0 26px rgba(199, 125, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30);
+  position: relative;
+  overflow: hidden;
+}
+
+.chrome-card-collectible::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(199, 125, 255, 0.10) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.chrome-card-collectible:hover::after {
+  opacity: 1;
+}
+
+/* Specular Shimmer Sweep Keyframes */
+@keyframes chromeSweep {
+  0% { transform: translateX(-120%) rotate(25deg); opacity: 0; }
+  50% { opacity: 0.4; }
+  100% { transform: translateX(220%) rotate(25deg); opacity: 0; }
+}
+
+.animate-chrome-sweep {
+  animation: chromeSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Custom Scrollbar for Metallic Purple Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050409;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2048;
+  border-radius: 9999px;
+  border: 1px solid rgba(199, 125, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9D4EDD;
+  box-shadow: 0 0 8px rgba(199, 125, 255, 0.5);
+}
